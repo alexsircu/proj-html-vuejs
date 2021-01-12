@@ -1,0 +1,29 @@
+#fusions-acquisitions-section {
+  width: 100%;
+  height: 850px;
+  background-image: url('../img/bg-6.jpg');
+  background-position: center;
+}
+
+#navbar {
+  width: 100%;
+  height: 80px;
+}
+
+#navbar-left {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+
+#navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  float: left;
+  width: 70%;
+  height: 100%;
+  @include inline-list;
+}

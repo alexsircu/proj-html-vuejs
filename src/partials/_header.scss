@@ -1,0 +1,33 @@
+header {
+  width: 100%;
+  height: 50px;
+  background-color: $titlesTextColor;
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: $smallTextColor;
+  i {
+    margin-right: 5px;
+  }
+}
+
+#header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  float: left;
+  width: 50%;
+  height: 100%;
+  @include inline-list;
+  a {
+    color: #aeb0b0;
+    .fa-phone-alt, .fa-envelope {
+      margin-right: 5px;
+    }
+  }
+}

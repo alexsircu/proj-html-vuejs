@@ -1,3 +1,105 @@
-body {
-  background-color: red;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(69, 187, 188, 0.5);
+  color: #048383;
+  font-size: 26px;
+  border-radius: 50px;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #21333E;
+}
+
+#header-left {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: #aeb0b0;
+}
+#header-left i {
+  margin-right: 5px;
+}
+
+#header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+#header-right ul {
+  list-style: none;
+}
+#header-right ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+#header-right ul li a {
+  text-decoration: none;
+}
+#header-right a {
+  color: #aeb0b0;
+}
+#header-right a .fa-phone-alt, #header-right a .fa-envelope {
+  margin-right: 5px;
+}
+
+#fusions-acquisitions-section {
+  width: 100%;
+  height: 850px;
+  background-image: url("../img/bg-6.jpg");
+  background-position: center;
+}
+
+#navbar {
+  width: 100%;
+  height: 80px;
+}
+
+#navbar-left {
+  display: flex;
+  align-items: center;
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+
+#navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+#navbar-right ul {
+  list-style: none;
+}
+#navbar-right ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+#navbar-right ul li a {
+  text-decoration: none;
 }
