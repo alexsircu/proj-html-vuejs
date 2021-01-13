@@ -36,7 +36,6 @@
 #jumbotron {
   float: right;
   width: 40%;
-  height: calc(100% - 80px);
   padding: 150px 0;
   h4 {
     color: $blueButtonsColor;
@@ -84,7 +83,6 @@
 // sezione 2 del main
 #about-the-network {
   width: 100%;
-  height: 600px;
   background-color: $darkSectionsBackgroundColor;
   padding: 150px 0;
 }
@@ -98,14 +96,9 @@
     color: $introSectionTextColor;
   }
   h2 {
-    font-size: 50px;
+    @include titles-params;
     color: $darkSectionTitlesColor;
-    margin: 20px 0;
-    span {
-      background-color: $darkSectionBackgroundTitleColor;
-      padding: 0 15px;
-      border-radius: 5px;
-    }
+    @include dark-span-titles;
   }
   p {
     color: $smallTextColor;
@@ -140,15 +133,68 @@
 // sezione 3 del main
 #business-areas {
   width: 100%;
-  height: 1000px;
   background-color: $excellenceinServicesBackground;
   padding: 100px 0;
+  h4 {
+    color: $introSectionTextColor;
+  }
+  #ecxellence-services-title {
+    @include titles-params;
+    color: $titlesTextColor;
+    @include light-span-titles;
+  }
+  p {
+    color: lighten($titlesTextColor, 20%);
+    margin-bottom: 20px;
+  }
 }
 
-#description-button-services-container {
+#business-areas-top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   p {
     width: 70%;
   }
+}
+
+#business-areas-bottom {
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  .business-areas-bottom-container {
+    width: calc(100% / 3 - 20px);
+    height: 250px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    h2 {
+      margin-bottom: 20px;
+      color: $titlesTextColor;
+    }
+    p {
+      font-size: 16px;
+      color: lighten($titlesTextColor, 20%);
+    }
+  }
+}
+
+.business-areas-icons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  i:first-child {
+    font-size: 38px;
+    color: $blueButtonsColor;
+  }
+  i:nth-child(2) {
+    font-size: 22px;
+    color: $lightSectionSpanColorTitle;
+  }
+}
+
+#financial-advisory-container, #legal-consulting-container {
+  margin: 0 30px;
 }

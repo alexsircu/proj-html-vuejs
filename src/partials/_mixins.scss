@@ -40,3 +40,25 @@
     }
   }
 }
+
+@mixin titles-params {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+@mixin dark-span-titles {
+  span {
+    background-color: $darkSectionBackgroundTitleColor;
+    padding: 0 15px;
+    border-radius: 5px;
+  }
+}
+
+@mixin light-span-titles {
+  span {
+    background-color: $lightSectionSpanColorTitle;
+    color: $blueButtonsColor;
+    padding: 0 15px;
+    border-radius: 5px;
+  }
+}
