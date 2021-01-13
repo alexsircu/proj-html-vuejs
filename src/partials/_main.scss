@@ -26,4 +26,50 @@
   width: 70%;
   height: 100%;
   @include inline-list;
+  a:not(.text-btn) {
+    color: $titlesTextColor;
+    font-size: 18px;
+  }
+}
+
+#jumbotron {
+  float: right;
+  width: 50%;
+  height: calc(100% - 80px);
+  padding: 150px 0;
+  h4 {
+    color: $blueButtonsColor;
+  }
+  h1 {
+    font-size: 70px;
+    color: $titlesTextColor;
+    font-weight: 700;
+  }
+}
+
+#inputs-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  input {
+    width: 40%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+#jumbotron-buttons-container {
+  display: flex;
+}
+
+.read-more-button {
+  @include btn-params;
+  border: 1px solid $blueButtonsColor;
+  margin-left: 20px;
+  a {
+    color: $blueButtonsColor;
+  }
 }

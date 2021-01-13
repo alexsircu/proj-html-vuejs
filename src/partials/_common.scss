@@ -4,6 +4,16 @@
   margin: 0;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
 .container {
   width: 60%;
   height: 100%;
@@ -16,9 +26,22 @@
   align-items: center;
   width: 200px;
   height: 50px;
-  background-color: $logoContColor;
-  color: $buttonsColor;
-  font-size: 26px;
+  // background-color: $logoContColor;
+  background: linear-gradient(-90deg, rgba(0,0,0,0) 50%, $logoContColor 50%);
+  color: $blueButtonsColor;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 8px;
   border-radius: 50px;
+}
 
+.btn {
+  @include btn-params;
+}
+
+.btn-blue-lagoon {
+  background-color: $blueButtonsColor;
+  a {
+    color: white;
+  }
 }
