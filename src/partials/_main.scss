@@ -34,7 +34,7 @@
 
 #jumbotron {
   float: right;
-  width: 50%;
+  width: 40%;
   height: calc(100% - 80px);
   padding: 150px 0;
   h4 {
@@ -50,13 +50,19 @@
 #inputs-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0;
-  input {
-    width: 40%;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    &:focus {
-      outline: none;
+  justify-content: space-between;
+  margin: 10px 0;
+  @include inputs-params;
+  .more-info-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #757575;
+    font-weight: 400;
+    @include input-dimensions;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

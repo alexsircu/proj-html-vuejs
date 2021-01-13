@@ -137,7 +137,7 @@ header {
 
 #jumbotron {
   float: right;
-  width: 50%;
+  width: 40%;
   height: calc(100% - 80px);
   padding: 150px 0;
 }
@@ -153,15 +153,47 @@ header {
 #inputs-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 #inputs-container input {
-  width: 40%;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  width: 48.5%;
+  height: 40px;
+  background-color: rgba(174, 176, 176, 0.3);
+  padding: 25px 15px;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 #inputs-container input:focus {
   outline: none;
+}
+#inputs-container input::-moz-placeholder {
+  font-size: 18px;
+}
+#inputs-container input:-ms-input-placeholder {
+  font-size: 18px;
+}
+#inputs-container input::placeholder {
+  font-size: 18px;
+}
+#inputs-container .more-info-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  color: #757575;
+  font-weight: 400;
+  width: 48.5%;
+  height: 40px;
+  background-color: rgba(174, 176, 176, 0.3);
+  padding: 25px 15px;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+#inputs-container .more-info-button:hover {
+  cursor: pointer;
 }
 
 #jumbotron-buttons-container {
