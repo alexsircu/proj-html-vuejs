@@ -1,3 +1,4 @@
+// sezione 1 del main
 #fusions-acquisitions-section {
   width: 100%;
   height: 850px;
@@ -77,5 +78,77 @@
   margin-left: 20px;
   a {
     color: $blueButtonsColor;
+  }
+}
+
+// sezione 2 del main
+#about-the-network {
+  width: 100%;
+  height: 600px;
+  background-color: $darkSectionsBackgroundColor;
+  padding: 150px 0;
+}
+
+#about-the-network-left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding-right: 100px;
+  h4 {
+    color: $introSectionTextColor;
+  }
+  h2 {
+    font-size: 50px;
+    color: $darkSectionTitlesColor;
+    margin: 20px 0;
+    span {
+      background-color: $darkSectionBackgroundTitleColor;
+      padding: 0 15px;
+      border-radius: 5px;
+    }
+  }
+  p {
+    color: $smallTextColor;
+    margin: 20px 0;
+  }
+}
+
+#about-the-network-right {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 20px 10px;
+  div {
+    width: 50%;
+    height: 50%;
+    margin-bottom: 10px;
+    h2 {
+      margin-bottom: 20px;
+      color: $darkSectionTitlesColor;
+      i {
+        color: $introSectionTextColor;
+        margin-right: 5px;
+      }
+    }
+    p {
+      color: $smallTextColor;
+    }
+  }
+}
+// sezione 3 del main
+#business-areas {
+  width: 100%;
+  height: 1000px;
+  background-color: $excellenceinServicesBackground;
+  padding: 100px 0;
+}
+
+#description-button-services-container {
+  display: flex;
+  justify-content: space-between;
+  p {
+    width: 70%;
   }
 }

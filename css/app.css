@@ -212,3 +212,74 @@ header {
 .read-more-button a {
   color: #048383;
 }
+
+#about-the-network {
+  width: 100%;
+  height: 600px;
+  background-color: #121117;
+  padding: 150px 0;
+}
+
+#about-the-network-left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding-right: 100px;
+}
+#about-the-network-left h4 {
+  color: #22918e;
+}
+#about-the-network-left h2 {
+  font-size: 50px;
+  color: white;
+  margin: 20px 0;
+}
+#about-the-network-left h2 span {
+  background-color: #012a2a;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+#about-the-network-left p {
+  color: #aeb0b0;
+  margin: 20px 0;
+}
+
+#about-the-network-right {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 20px 10px;
+}
+#about-the-network-right div {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 10px;
+}
+#about-the-network-right div h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+#about-the-network-right div h2 i {
+  color: #22918e;
+  margin-right: 5px;
+}
+#about-the-network-right div p {
+  color: #aeb0b0;
+}
+
+#business-areas {
+  width: 100%;
+  height: 1000px;
+  background-color: #e8ecea;
+  padding: 100px 0;
+}
+
+#description-button-services-container {
+  display: flex;
+  justify-content: space-between;
+}
+#description-button-services-container p {
+  width: 70%;
+}

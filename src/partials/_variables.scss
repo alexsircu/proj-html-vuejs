@@ -1,13 +1,16 @@
-// $titlesTextColor: #1c2224;
+$smallTextColor: #aeb0b0; //colore dei testi dentro i p
+$logoContColor: rgba(69,187,188,0.2); //colore parte sinistra del logo
+$blueButtonsColor: #048383; //colore dei tasti verde acqua
+$inputBackgroundColor: rgba(174, 176, 176, 0.3); //colore degli input
+$introSectionTextColor: #22918e; //colore del nome della sezione
 
-$titlesTextColor: #21333E;
+// sezione chiara del main
+$titlesTextColor: #21333E; //colore dei titoli sezione chiara
 
-$smallTextColor: #aeb0b0;
+// sezione scura del main
+$darkSectionsBackgroundColor: #121117; //colore dello sfondo
+$darkSectionBackgroundTitleColor: darken($blueButtonsColor, 18%); //colore dello span nel titolo
+$darkSectionTitlesColor: white; //colore dei titoli sezione scura
 
-$logoContColor: rgba(69,187,188,0.2);
-
-$blueButtonsColor: #048383;
-
-$introSectionTextColor: #96fefe;
-
-$inputBackgroundColor: rgba(174, 176, 176, 0.3);
+// sezione excellence in services
+$excellenceinServicesBackground: #e8ecea;
