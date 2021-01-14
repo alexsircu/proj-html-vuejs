@@ -212,7 +212,7 @@ header {
   color: #048383;
 }
 
-#about-the-network {
+#about-the-network-section {
   width: 100%;
   background-color: #121117;
   padding: 150px 0;
@@ -267,26 +267,26 @@ header {
   color: #aeb0b0;
 }
 
-#business-areas {
+#business-areas-section {
   width: 100%;
   background-color: #e8ecea;
   padding: 100px 0;
 }
-#business-areas h4 {
+#business-areas-section h4 {
   color: #22918e;
 }
-#business-areas #ecxellence-services-title {
+#business-areas-section #ecxellence-services-title {
   font-size: 50px;
   margin: 20px 0;
   color: #21333E;
 }
-#business-areas #ecxellence-services-title span {
+#business-areas-section #ecxellence-services-title span {
   background-color: #c8dce0;
   color: #048383;
   padding: 0 15px;
   border-radius: 5px;
 }
-#business-areas p {
+#business-areas-section p {
   color: #446a81;
   margin-bottom: 20px;
 }
@@ -338,4 +338,74 @@ header {
 
 #financial-advisory-container, #legal-consulting-container {
   margin: 0 30px;
+}
+
+#process-management-section {
+  width: 100%;
+  background-color: white;
+  padding: 150px 0;
+}
+#process-management-section .container {
+  text-align: center;
+  padding: 0 200px;
+}
+#process-management-section .container h4 {
+  color: #22918e;
+}
+#process-management-section .container h2 {
+  font-size: 50px;
+  margin: 20px 0;
+  color: #21333E;
+}
+#process-management-section .container h2 span {
+  background-color: #c8dce0;
+  color: #048383;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+#process-management-section .container p {
+  color: #446a81;
+}
+
+#process-management-section-bottom {
+  display: flex;
+  justify-content: center;
+  border-top: 5px solid #c8dce0;
+  margin-top: 100px;
+}
+
+.process-management-containers {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  padding-top: 50px;
+  margin-right: 70px;
+}
+.process-management-containers h2 {
+  color: #21333E;
+  margin-bottom: 20px;
+}
+.process-management-containers p {
+  color: #446a81;
+}
+
+.process-management-containers:last-child {
+  margin-right: 0;
+}
+
+.process-management-numbers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: #c8dce0;
+  color: #048383;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
 }

@@ -81,7 +81,7 @@
 }
 
 // sezione 2 del main
-#about-the-network {
+#about-the-network-section {
   width: 100%;
   background-color: $darkSectionsBackgroundColor;
   padding: 150px 0;
@@ -131,7 +131,7 @@
   }
 }
 // sezione 3 del main
-#business-areas {
+#business-areas-section {
   width: 100%;
   background-color: $excellenceinServicesBackground;
   padding: 100px 0;
@@ -144,7 +144,7 @@
     @include light-span-titles;
   }
   p {
-    color: lighten($titlesTextColor, 20%);
+    color: $lightSectionTextParagraphColor;
     margin-bottom: 20px;
   }
 }
@@ -198,3 +198,70 @@
 #financial-advisory-container, #legal-consulting-container {
   margin: 0 30px;
 }
+
+// sezione 4 del main
+#process-management-section {
+  width: 100%;
+  background-color: $processManagementBackground;
+  padding: 150px 0;
+  .container {
+    text-align: center;
+    padding: 0 200px;
+    h4 {
+      color: $introSectionTextColor;
+    }
+    h2 {
+      @include titles-params;
+      @include light-span-titles;
+      color: $titlesTextColor;
+    }
+    p {
+      color: $lightSectionTextParagraphColor;
+    }
+  }
+}
+
+#process-management-section-bottom {
+  display: flex;
+  justify-content: center;
+  border-top: 5px solid $lightSectionSpanColorTitle;
+  margin-top: 100px;
+}
+
+.process-management-containers {
+  position: relative;
+  width: 250px;
+  text-align: center;
+  padding-top: 50px;
+  margin-right: 70px;
+  h2 {
+    color: $titlesTextColor;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $lightSectionTextParagraphColor;
+  }
+}
+
+.process-management-containers:last-child {
+  margin-right: 0;
+}
+
+.process-management-numbers-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -12%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 45px;
+  background-color: $lightSectionSpanColorTitle;
+  color: $blueButtonsColor;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+// sezione 5 del main

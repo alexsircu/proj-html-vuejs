@@ -1,4 +1,3 @@
-$smallTextColor: #aeb0b0; //colore dei testi dentro i p
 $logoContColor: rgba(69,187,188,0.2); //colore parte sinistra del logo
 $blueButtonsColor: #048383; //colore dei tasti verde acqua
 $inputBackgroundColor: rgba(174, 176, 176, 0.3); //colore degli input
@@ -6,12 +5,17 @@ $introSectionTextColor: #22918e; //colore del nome della sezione
 
 // sezione chiara del main
 $titlesTextColor: #21333E; //colore dei titoli sezione chiara
+$lightSectionTextParagraphColor: lighten($titlesTextColor, 20%); //colore dei testi dentro i p
 
 // sezione scura del main
 $darkSectionsBackgroundColor: #121117; //colore dello sfondo
 $darkSectionBackgroundTitleColor: darken($blueButtonsColor, 18%); //colore dello span nel titolo
+$smallTextColor: #aeb0b0; //colore dei testi dentro i p
 $darkSectionTitlesColor: white; //colore dei titoli sezione scura
 
 // sezione excellence in services
 $excellenceinServicesBackground: #e8ecea; //sfondo della sezione
 $lightSectionSpanColorTitle: lighten(#50828c, 40%);
+
+// sezione process management
+$processManagementBackground: white; //sfondo della sezione
