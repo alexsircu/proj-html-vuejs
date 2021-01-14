@@ -398,7 +398,7 @@ header {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: -12%;
+  top: -14%;
   left: 50%;
   transform: translateX(-50%);
   width: 45px;
@@ -408,4 +408,103 @@ header {
   font-size: 20px;
   font-weight: 600;
   border-radius: 50%;
+}
+
+#team-experts-section {
+  width: 100%;
+  background-color: #121117;
+  padding: 140px 0;
+}
+#team-experts-section .container > h4 {
+  color: #22918e;
+}
+
+#team-experts-section-left {
+  float: left;
+  width: 70%;
+  padding-right: 50px;
+}
+#team-experts-section-left #team-experts-title {
+  font-size: 50px;
+  margin: 20px 0;
+  color: white;
+}
+#team-experts-section-left #team-experts-title span {
+  background-color: #012a2a;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+#team-experts-section-left p {
+  color: #aeb0b0;
+}
+
+#team-experts-section-left-bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+#team-experts-section-left-bottom .teams-container {
+  width: 50%;
+  height: 50%;
+  padding-top: 50px;
+}
+#team-experts-section-left-bottom .teams-container img {
+  float: left;
+  width: 110px;
+  border-radius: 5px;
+  margin-right: 30px;
+}
+#team-experts-section-left-bottom .teams-container h2 {
+  color: white;
+}
+#team-experts-section-left-bottom .teams-container h4 {
+  font-size: 14px;
+  color: #aeb0b0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#team-experts-section-left-bottom .teams-container ul {
+  display: flex;
+  list-style: none;
+}
+#team-experts-section-left-bottom .teams-container ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #012a2a;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#team-experts-section-left-bottom .teams-container ul li a {
+  color: #22918e;
+}
+
+#team-experts-section-right {
+  float: left;
+  width: 30%;
+  background-color: #22918e;
+  padding: 30px 30px 40px 30px;
+  margin-top: 40px;
+  border-radius: 5px;
+}
+#team-experts-section-right h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+#team-experts-section-right p {
+  margin-bottom: 20px;
+  color: #aeb0b0;
+}
+
+#team-experts-section-right-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+#team-experts-section-right-bottom h4 {
+  color: white;
+}
+#team-experts-section-right-bottom i {
+  font-size: 24px;
+  color: #035b5b;
 }
