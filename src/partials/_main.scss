@@ -47,16 +47,20 @@
   }
 }
 
-#inputs-container {
+#jumbotron-inputs-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px 0;
   @include inputs-params;
+  input {
+    width: 48.5%;
+  }
   .more-info-button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 48.5%;
     font-size: 18px;
     color: #757575;
     font-weight: 400;
@@ -427,3 +431,41 @@
 }
 
 // sezione 7 del main
+#newsletter-section {
+  width: 100%;
+  background-image: url('../img/bg-1.jpg');
+  background-position: center;
+  .container {
+    padding: 120px 110px;
+  }
+}
+
+#newsletter-left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  h4 {
+    color: $introSectionTextColor;
+  }
+  #newsletter-title {
+    @include titles-params;
+    color: $darkSectionTitlesColor;
+    @include dark-span-titles;
+  }
+  p {
+    color: $smallTextColor;
+  }
+}
+
+#newsletter-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding-left: 20px;
+  @include inputs-params;
+  .btn-blue-lagoon {
+    width: 125px;
+  }
+}
