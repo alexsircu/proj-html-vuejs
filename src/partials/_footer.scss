@@ -16,11 +16,19 @@
   width: calc(100% / 4 - 20px);
 }
 
-#footer-top-contaier-left {
+#footer-top-container-left {
+  .logo {
+    span {
+      color: $smallTextColor;
+    }
+  }
   ul {
     margin: 30px 0;
     li {
       margin-bottom: 20px;
+      i {
+        margin-right: 5px;
+      }
     }
   }
 }

@@ -11,6 +11,9 @@ header {
   width: 50%;
   height: 100%;
   color: $smallTextColor;
+  p {
+    font-size: 14px;
+  }
   i {
     margin-right: 5px;
   }
@@ -25,6 +28,7 @@ header {
   height: 100%;
   @include inline-list;
   a {
+    font-size: 14px;
     color: #aeb0b0;
     .fa-phone-alt, .fa-envelope {
       margin-right: 5px;

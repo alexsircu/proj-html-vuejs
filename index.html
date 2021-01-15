@@ -5,413 +5,391 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/app.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
   <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class="container clearfix">
-      <div id="header-left">
-        <i class="fas fa-clock"></i>
-        <p>Open Hours: Mon - Sat _ 9:00 - 18-00</p>
-      </div>
-
-      <div id="header-right">
-        <ul>
-          <li><a href="#"><i class="fas fa-phone-alt"></i> +1 (305) 1234-5678</a></li>
-          <li><a href="#"><i class="fas fa-envelope"></i> hello@example.com</a></li>
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="fusions-acquisitions-section">
+  <div id="root">
+    <header>
       <div class="container clearfix">
-        <div id="navbar" class="clearfix">
-          <div id="navbar-left">
-            <div class="logo">
-              NEXGEN
+        <div id="header-left">
+          <i class="fas fa-clock"></i>
+          <p>Open Hours: {{headerLeft.openingDay}} - {{headerLeft.closingDay}} - {{headerLeft.openingHopur}} - {{headerLeft.closingHour}}</p>
+        </div>
+        <div id="header-right">
+          <ul>
+            <li v-for="item in headerRight"><a href="#"><i :class="item.iconClassNameHeader"></i> {{item.dataTextHeader}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="fusions-acquisitions-section">
+        <div class="container clearfix">
+          <div id="navbar" class="clearfix">
+            <div id="navbar-left">
+              <div class="logo">
+                NEX<span>GEN</span>
+              </div>
+            </div>
+
+            <div id="navbar-right">
+              <ul>
+                <li v-for="item in navbar"><a href="">{{item.name}}</a></li>
+                <li>
+                  <div class="btn btn-blue-lagoon">
+                    <a href="" class="text-btn">GET IN TOUCH</a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div id="navbar-right">
+          <div id="jumbotron">
+            <h4>FUSIONS & ACQUISITIONS</h4>
+            <h1>Insurance Consulting</h1>
+            <div id="jumbotron-inputs-container">
+              <input type="text" name="name" value="" placeholder="Name">
+              <input type="text" name="email" value="" placeholder="Email">
+              <input type="text" name="phone" value="" placeholder="Phone">
+              <div class="more-info-button">
+                More info
+                <i class="fas fa-angle-down"></i>
+              </div>
+            </div>
+
+            <div id="jumbotron-buttons-container">
+              <div class="btn btn-blue-lagoon">
+                <a href="" class="text-btn">GET IN TOUCH</a>
+              </div>
+              <div class="read-more-button">
+                <a href="#">READ MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-the-network-section">
+        <div class="container clearfix">
+          <div id="about-the-network-left">
+            <h4>ABOUT THE NETWORK</h4>
+            <h2><span>The</span> Company</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+
+          <div id="about-the-network-right">
+            <div class="">
+              <h2><i class="fas fa-award"></i> Tradition</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="">
+              <h2><i class="fas fa-lock"></i> Security</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="">
+              <h2><i class="far fa-edit"></i> Certificate</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="">
+              <h2><i class="fas fa-graduation-cap"></i> Expertise</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="business-areas-section">
+        <div class="container">
+          <h4>OUR BUSINESS AREAS</h4>
+          <h2 id="ecxellence-services-title">Excellence In <span>Srevices</span></h2>
+
+          <div id="business-areas-top">
+            <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowed professionals. These are some options that you can hire.</p>
+            <div class="btn btn-blue-lagoon">
+              <a href="#">SEE ALL</a>
+            </div>
+          </div>
+
+          <div id="business-areas-bottom">
+            <div class="business-areas-bottom-container">
+              <div class="business-areas-icons-container">
+                <i class="fas fa-project-diagram"></i>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+
+              <div class="">
+                <h2>Audit & Assurance</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div id="financial-advisory-container" class="business-areas-bottom-container">
+              <div class="business-areas-icons-container">
+                <i class="fas fa-briefcase"></i>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+
+              <div class="">
+                <h2>Financial Advisory</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="business-areas-bottom-container">
+              <div class="business-areas-icons-container">
+                <i class="far fa-chart-bar"></i>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+
+              <div class="">
+                <h2>Analystcs and M&A</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="business-areas-bottom-container">
+              <div class="business-areas-icons-container">
+                <i class="fas fa-plane"></i>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+
+              <div class="">
+                <h2>Middle Marketing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div id="legal-consulting-container" class="business-areas-bottom-container">
+              <div class="business-areas-icons-container">
+                <i class="fas fa-globe"></i>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+
+              <div class="">
+                <h2>Legal Consulting</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+            <div class="business-areas-bottom-container">
+              <div class="business-areas-icons-container">
+                <i class="fas fa-inbox"></i>
+                <i class="fas fa-arrow-right"></i>
+              </div>
+
+              <div class="">
+                <h2>Regulatory Risk</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="process-management-section">
+        <div class="container">
+          <h4>HOW IT WORKS IN PRACTICE</h4>
+          <h2><span>Process</span> Management</h2>
+          <p>We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.</p>
+        </div>
+        <div id="process-management-section-bottom">
+          <div class="process-management-containers">
+            <div class="process-management-numbers-container">01</div>
+            <h2>Collection of information</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="process-management-containers">
+            <div class="process-management-numbers-container">02</div>
+            <h2>Strategic planning</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="process-management-containers">
+            <div class="process-management-numbers-container">03</div>
+            <h2>Assignment of responsabilities</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="process-management-containers">
+            <div class="process-management-numbers-container">04</div>
+            <h2>Formatting process</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+
+          <div class="process-management-containers">
+            <div class="process-management-numbers-container">05</div>
+            <h2>Continuity formalization</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="team-experts-section">
+        <div class="container clearfix">
+          <h4>WE LIKE WHAT WE DO</h4>
+
+          <div id="team-experts-section-left">
+            <h2 id="team-experts-title"><span>Team</span> of Experts</h2>
+            <p>Ethics and integrity are the bases on which our professionals build their chareers. They are fundamentals that become daily attitudes.</p>
+
+            <div id="team-experts-section-left-bottom">
+              <div class="teams-container clearfix">
+                <img src="img/team-1.jpg" alt="David Cooper">
+                <h2>David Cooper</h2>
+                <h4>CTO & CO-FOUNDER</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+              <div class="teams-container clearfix">
+                <img src="img/team-3.jpg" alt="Oliver Jones">
+                <h2>Oliver Jones</h2>
+                <h4>CHIEF PROCUREMENT</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+              <div class="teams-container clearfix">
+                <img src="img/team-2.jpg" alt="Emma Lopez">
+                <h2>Emma Lopez</h2>
+                <h4>CHIEF MARKETING</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+              <div class="teams-container clearfix">
+                <img src="img/team-4.jpg" alt="T. Johnson">
+                <h2>T. Johnson</h2>
+                <h4>CEO & PRESIDENT</h4>
+                <ul>
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div id="team-experts-section-right">
+            <h2>President Speech</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div id="team-experts-section-right-bottom">
+              <h4>T. Johnson</h4>
+              <i class="fas fa-quote-right"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="latest-news-section">
+        <div class="container">
+          <h4>OUR EDITORIAL CONTENT</h4>
+          <h2 id="latest-news-title">Latest <span>News</span></h2>
+
+          <div id="latest-news-top">
+            <p>Every week we publish content about what is best in the business world.</p>
+            <div class="btn btn-blue-lagoon">
+              <a href="#">SEE ALL</a>
+            </div>
+          </div>
+
+          <div id="latest-news-bottom">
+            <div class="latest-news-bottom-img-container">
+              <div class="latest-news-bottom-img-title">
+                <h2>Increasing creativity is possible for everyone</h2>
+              </div>
+            </div>
+            <div class="latest-news-bottom-img-container">
+              <div class="latest-news-bottom-img-title">
+                <h2>Because market research is part of the business plan</h2>
+              </div>
+            </div>
+            <div class="latest-news-bottom-img-container">
+              <div class="latest-news-bottom-img-title">
+                <h2>Working from home is now a trend</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="newsletter-section">
+        <div class="container clearfix">
+          <div id="newsletter-left">
+            <h4>NEWSLETTER</h4>
+            <h2 id="newsletter-title"><span>Know</span> First</h2>
+            <p>Follow closely and receive content about our company and the news of the current market.</p>
+          </div>
+
+          <div id="newsletter-right">
+            <input type="text" name="name" value="" placeholder="Name">
+            <input type="text" name="email" value="" placeholder="Email">
+            <div class="btn btn-blue-lagoon">
+              <a href="" class="text-btn">SUBSCRIBE</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer-top">
+        <div class="container">
+          <div class="footer-top-containers" id="footer-top-container-left">
+            <div class="logo">
+              NEX<span>GEN</span>
+            </div>
+            <p>A functional HTML Template for Corporate & Business.</p>
             <ul>
-              <li><a href="">HOME</a></li>
-              <li><a href="">ABOUT</a></li>
-              <li><a href="">SERVICES</a></li>
-              <li><a href="">PROCESS</a></li>
-              <li><a href="">TEAM</a></li>
-              <li><a href="">BLOG</a></li>
-              <li>
-                <div class="btn btn-blue-lagoon">
-                  <a href="" class="text-btn">GET IN TOUCH</a>
-                </div>
-              </li>
+              <li v-for="item in contactsFooter"><a href="#"><i :class="item.iconClassNameFooter"></i> {{item.dataTextFooter}}</a></li>
+            </ul>
+            <div class="footer-get-in-button">
+              <a href="#">GET IN TOUCH</a>
+            </div>
+          </div>
+
+          <div class="footer-top-containers with-card">
+            <h2>About</h2>
+            <ul>
+              <li v-for="item in linksFooter"><a href=""><i :class="item.iconClassLinksFooter"></i> {{item.dataTextAboutFooter}}</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-top-containers with-card">
+            <h2>Services</h2>
+            <ul>
+              <li v-for="item in linksFooter"><a href=""><i :class="item.iconClassLinksFooter"></i> {{item.dataTextServicesFooter}}</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-top-containers with-card">
+            <h2>Support</h2>
+            <ul>
+              <li v-for="item in linksFooter"><a href=""><i :class="item.iconClassLinksFooter"></i> {{item.dataTextSupportFooter}}</a></li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <div id="jumbotron">
-          <h4>FUSIONS & ACQUISITIONS</h4>
-          <h1>Insurance Consulting</h1>
-          <div id="jumbotron-inputs-container">
-            <input type="text" name="" value="" placeholder="Name">
-            <input type="text" name="" value="" placeholder="Email">
-            <input type="text" name="" value="" placeholder="Phone">
-            <div class="more-info-button">
-              More info
-              <i class="fas fa-angle-down"></i>
-            </div>
-          </div>
-
-          <div id="jumbotron-buttons-container">
-            <div class="btn btn-blue-lagoon">
-              <a href="" class="text-btn">GET IN TOUCH</a>
-            </div>
-            <div class="read-more-button">
-              <a href="#">READ MORE</a>
-            </div>
-          </div>
+      <div id="footer-bottom">
+        <div class="container">
+          <p>Enjoy the low price. We are tracking any intention of piracy.</p>
+          <p><i class="far fa-copyright"></i> 2020 NEXGEN is Proudly Powered by <span>Codings</span>.</p>
         </div>
       </div>
-    </section>
+    </footer>
+  </div>
 
-    <section id="about-the-network-section">
-      <div class="container clearfix">
-        <div id="about-the-network-left">
-          <h4>ABOUT THE NETWORK</h4>
-          <h2><span>The</span> Company</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-        </div>
-
-        <div id="about-the-network-right">
-          <div class="">
-            <h2><i class="fas fa-award"></i> Tradition</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div class="">
-            <h2><i class="fas fa-lock"></i> Security</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div class="">
-            <h2><i class="far fa-edit"></i> Certificate</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div class="">
-            <h2><i class="fas fa-graduation-cap"></i> Expertise</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="business-areas-section">
-      <div class="container">
-        <h4>OUR BUSINESS AREAS</h4>
-        <h2 id="ecxellence-services-title">Excellence In <span>Srevices</span></h2>
-
-        <div id="business-areas-top">
-          <p>We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowed professionals. These are some options that you can hire.</p>
-          <div class="btn btn-blue-lagoon">
-            <a href="#">SEE ALL</a>
-          </div>
-        </div>
-
-        <div id="business-areas-bottom">
-          <div class="business-areas-bottom-container">
-            <div class="business-areas-icons-container">
-              <i class="fas fa-project-diagram"></i>
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="">
-              <h2>Audit & Assurance</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div id="financial-advisory-container" class="business-areas-bottom-container">
-            <div class="business-areas-icons-container">
-              <i class="fas fa-briefcase"></i>
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="">
-              <h2>Financial Advisory</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div class="business-areas-bottom-container">
-            <div class="business-areas-icons-container">
-              <i class="far fa-chart-bar"></i>
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="">
-              <h2>Analystcs and M&A</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div class="business-areas-bottom-container">
-            <div class="business-areas-icons-container">
-              <i class="fas fa-plane"></i>
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="">
-              <h2>Middle Marketing</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div id="legal-consulting-container" class="business-areas-bottom-container">
-            <div class="business-areas-icons-container">
-              <i class="fas fa-globe"></i>
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="">
-              <h2>Legal Consulting</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-          <div class="business-areas-bottom-container">
-            <div class="business-areas-icons-container">
-              <i class="fas fa-inbox"></i>
-              <i class="fas fa-arrow-right"></i>
-            </div>
-
-            <div class="">
-              <h2>Regulatory Risk</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process-management-section">
-      <div class="container">
-        <h4>HOW IT WORKS IN PRACTICE</h4>
-        <h2><span>Process</span> Management</h2>
-        <p>We work with innovative methodologies to ensure that the entire reformatting process is done from start to finish as planned.</p>
-      </div>
-      <div id="process-management-section-bottom">
-        <div class="process-management-containers">
-          <div class="process-management-numbers-container">01</div>
-          <h2>Collection of information</h2>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-
-        <div class="process-management-containers">
-          <div class="process-management-numbers-container">02</div>
-          <h2>Strategic planning</h2>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-
-        <div class="process-management-containers">
-          <div class="process-management-numbers-container">03</div>
-          <h2>Assignment of responsabilities</h2>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-
-        <div class="process-management-containers">
-          <div class="process-management-numbers-container">04</div>
-          <h2>Formatting process</h2>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-
-        <div class="process-management-containers">
-          <div class="process-management-numbers-container">05</div>
-          <h2>Continuity formalization</h2>
-          <p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="team-experts-section">
-      <div class="container clearfix">
-        <h4>WE LIKE WHAT WE DO</h4>
-
-        <div id="team-experts-section-left">
-          <h2 id="team-experts-title"><span>Team</span> of Experts</h2>
-          <p>Ethics and integrity are the bases on which our professionals build their chareers. They are fundamentals that become daily attitudes.</p>
-
-          <div id="team-experts-section-left-bottom">
-            <div class="teams-container clearfix">
-              <img src="img/team-1.jpg" alt="David Cooper">
-              <h2>David Cooper</h2>
-              <h4>CTO & CO-FOUNDER</h4>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-            <div class="teams-container clearfix">
-              <img src="img/team-3.jpg" alt="Oliver Jones">
-              <h2>Oliver Jones</h2>
-              <h4>CHIEF PROCUREMENT</h4>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-            <div class="teams-container clearfix">
-              <img src="img/team-2.jpg" alt="Emma Lopez">
-              <h2>Emma Lopez</h2>
-              <h4>CHIEF MARKETING</h4>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-            <div class="teams-container clearfix">
-              <img src="img/team-4.jpg" alt="T. Johnson">
-              <h2>T. Johnson</h2>
-              <h4>CEO & PRESIDENT</h4>
-              <ul>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div id="team-experts-section-right">
-          <h2>President Speech</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <div id="team-experts-section-right-bottom">
-            <h4>T. Johnson</h4>
-            <i class="fas fa-quote-right"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="latest-news-section">
-      <div class="container">
-        <h4>OUR EDITORIAL CONTENT</h4>
-        <h2 id="latest-news-title">Latest <span>News</span></h2>
-
-        <div id="latest-news-top">
-          <p>Every week we publish content about what is best in the business world.</p>
-          <div class="btn btn-blue-lagoon">
-            <a href="#">SEE ALL</a>
-          </div>
-        </div>
-
-        <div id="latest-news-bottom">
-          <div class="latest-news-bottom-img-container">
-            <div class="latest-news-bottom-img-title">
-              <h2>Increasing creativity is possible for everyone</h2>
-            </div>
-          </div>
-          <div class="latest-news-bottom-img-container">
-            <div class="latest-news-bottom-img-title">
-              <h2>Because market research is part of the business plan</h2>
-            </div>
-          </div>
-          <div class="latest-news-bottom-img-container">
-            <div class="latest-news-bottom-img-title">
-              <h2>Working from home is now a trend</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="newsletter-section">
-      <div class="container clearfix">
-        <div id="newsletter-left">
-          <h4>NEWSLETTER</h4>
-          <h2 id="newsletter-title"><span>Know</span> First</h2>
-          <p>Follow closely and receive content about our company and the news of the current market.</p>
-        </div>
-
-        <div id="newsletter-right">
-          <input type="text" name="" value="" placeholder="Name">
-          <input type="text" name="" value="" placeholder="Email">
-          <div class="btn btn-blue-lagoon">
-            <a href="" class="text-btn">SUBSCRIBE</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div id="footer-top">
-      <div class="container">
-        <div class="footer-top-containers" id="footer-top-contaier-left">
-          <div class="logo">
-            NEXGEN
-          </div>
-          <p>A functional HTML Template for Corporate & Business.</p>
-          <ul>
-            <li><a href="#"><i class="fas fa-phone-alt"></i> +1 (305) 1234-5678</a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i> hello@example.com</a></li>
-            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Main Avenue, 987</a></li>
-          </ul>
-          <div class="footer-get-in-button">
-            <a href="#">GET IN TOUCH</a>
-          </div>
-        </div>
-
-        <div class="footer-top-containers with-card">
-          <h2>About</h2>
-          <ul>
-            <li><a href=""><i class="fas fa-angle-right"></i> The Company</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Institutional</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Social & Events</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Innovation</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Environment</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Technology</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-top-containers with-card">
-          <h2>Services</h2>
-          <ul>
-            <li><a href=""><i class="fas fa-angle-right"></i> Audit & Assurance</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Financial Advisory</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Analytics M&A</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Middle Marketing</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Legal Consulting</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Regulatory Risk</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-top-containers with-card">
-          <h2>Support</h2>
-          <ul>
-            <li><a href=""><i class="fas fa-angle-right"></i> Responsability</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Terms of Use</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> About Cookies</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Privacy Policy</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> Accessibility</a></li>
-            <li><a href=""><i class="fas fa-angle-right"></i> information</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div id="footer-bottom">
-      <div class="container">
-        <p>Enjoy the low price. We are tracking any intention of piracy.</p>
-        <p><i class="far fa-copyright"></i> 2020 NEXGEN is Proudly Powered by <span>Codings</span>.</p>
-      </div>
-    </div>
-  </footer>
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

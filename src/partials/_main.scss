@@ -17,6 +17,11 @@
   float: left;
   width: 30%;
   height: 100%;
+  .logo {
+    span {
+      color: $titlesTextColor;
+    }
+  }
 }
 
 #navbar-right {
@@ -35,7 +40,7 @@
 
 #jumbotron {
   float: right;
-  width: 40%;
+  width: 45%;
   padding: 150px 0;
   h4 {
     color: $blueButtonsColor;
@@ -43,7 +48,9 @@
   h1 {
     font-size: 70px;
     color: $titlesTextColor;
-    font-weight: 700;
+    font-weight: 900;
+    line-height: 80px;
+    margin-bottom: 30px;
   }
 }
 
@@ -120,7 +127,7 @@
   div {
     width: 50%;
     height: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     h2 {
       margin-bottom: 20px;
       color: $darkSectionTitlesColor;
